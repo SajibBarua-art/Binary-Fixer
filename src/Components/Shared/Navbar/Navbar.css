@@ -1,0 +1,10 @@
+.nav-style li {
+    margin: 0 20px;
+}
+.nav-style li a {
+    font-weight: 600;
+}
+.nav-style li:hover{
+    background-color: gray;
+    border-radius: 5px;
+}
