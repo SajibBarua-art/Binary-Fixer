@@ -4,3 +4,38 @@
 .brand-bg{
   background-color: rgb(5, 182, 182);
 }
+.brand-btn {
+  text-decoration: none;
+  background: linear-gradient(to top right, #33ccff, #0898c9, #33ccff);;
+  cursor: pointer;
+  padding: 7px;
+  color: white;
+  border:1px solid rgb(5, 182, 182);
+  border-radius: 5px;
+  font-weight: 700;
+  box-shadow: 5px 5px 6px gray;
+}
+.brand-btn:hover{
+  background:linear-gradient(to top right, #33ccff 0%, #0898c9 86%);;
+  box-shadow: none;
+  color:white;
+}
+
+.component-color {
+  color: rgb(53, 0, 90);
+}
+
+.scroll-items {
+  height:470px;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple white;
+  scrollbar-width: thin;
+}
+
+.bg-gray-style {
+  background-color: lightgray;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 6px;
+}

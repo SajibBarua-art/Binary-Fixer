@@ -12,7 +12,7 @@ const Navbar = () => {
     }
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container-fluid d-flex justify-content-between">
+            <div className="container-fluid d-flex justify-content-between align-items-start">
                 <div>
                     <Link style={brandStyle} to='/home'>Binary Fixer</Link>
                 </div>
@@ -26,7 +26,7 @@ const Navbar = () => {
                                 <a className="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Services</a>
+                                <Link className="nav-link" to="/services">Services</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Prices</a>

@@ -1,0 +1,14 @@
+.add-image-box {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 300px;
+}
+.form-card {
+    background-color:ghostwhite;
+    border-radius: 10px;
+    width: 90%;
+    padding: 10px 0;
+    margin: auto;
+    border: 1px solid rebeccapurple;
+}

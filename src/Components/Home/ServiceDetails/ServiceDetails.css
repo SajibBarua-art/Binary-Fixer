@@ -1,0 +1,8 @@
+.card-style {
+    margin: 15px;
+    width: 16rem;
+}
+.card-style img {
+    padding: 10px;
+    border-radius: 5px;
+}
