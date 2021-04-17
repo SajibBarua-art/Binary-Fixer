@@ -24,7 +24,7 @@ const AddService = () => {
         })
             .then(res => {
                 if (res) {
-                    alert('Your submit service is added to the shop.')
+                    alert('Your submitted service is added to the website.')
                 }
             })
     };

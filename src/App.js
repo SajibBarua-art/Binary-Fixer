@@ -7,6 +7,7 @@ import {
 import Home from './Components/Home/Home/Home';
 import AddService from './Components/AddService/AddService';
 import Services from './Components/Home/Services/Services';
+import AddTestimonial from './Components/AddTestimonial/AddTestimonial';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path='/services'>
           <Services></Services>
+        </Route>
+        <Route to='/addTestimonial'>
+          <AddTestimonial></AddTestimonial>
         </Route>
       </Switch>
     </Router>
