@@ -13,7 +13,7 @@ const Services = () => {
         <div className='mb-4'>
             <h2 className='ms-4'>Our <span className="brand-color">Services</span>:</h2>
             <div className="d-flex justify-content-center">
-                <div className="d-flex flex-wrap justify-content-center align-items-center scroll-items bg-gray-style">
+                <div className="d-flex flex-wrap justify-content-evenly scroll-items bg-gray-style">
                     {
                         services.map(service => <ServiceDetails key={service._id} service={service}></ServiceDetails>)
                     }

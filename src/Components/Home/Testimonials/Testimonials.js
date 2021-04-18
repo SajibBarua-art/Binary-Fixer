@@ -13,7 +13,7 @@ const Testimonials = () => {
             <h1>Our <span className="brand-color">Testimonials</span> :</h1>
             <p className="fs-5">There are many valid reasons why you should choose us to take care of your valuable device</p>
             <div className="d-flex justify-content-center">
-                <div className="d-flex flex-wrap justify-content-center align-items-center scroll-items bg-gray-style">
+                <div className="d-flex flex-wrap justify-content-evenly scroll-items bg-gray-style">
                     {
                         testimonials.map(testimonial => <TestimonialDetails key={testimonial._id} testimonial={testimonial}></TestimonialDetails>)
                     }

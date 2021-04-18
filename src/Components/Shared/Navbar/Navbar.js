@@ -23,31 +23,25 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-style">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <a className="nav-link active" aria-current="page" href="/">Home</a>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/services">Services</Link>
+                                <Link className="nav-link" to="/">Services</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Prices</a>
+                                <a className="nav-link" href="/">Testimonials</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Blog</a>
+                                <a className="nav-link" href="/">Shop</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Testimonials</a>
+                                <a className="nav-link" href="/">Contact</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Tips & Faq</a>
+                                <a className="nav-link" href="/">About Us</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Shop</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Contact</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">About Us</a>
+                                <Link to='login' className='btn btn-secondary'>Login</Link>
                             </li>
                         </ul>
                     </div>

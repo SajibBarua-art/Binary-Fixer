@@ -26,7 +26,7 @@
 }
 
 .scroll-items {
-  height:470px;
+  height:415px;
   overflow-y: scroll;
   scrollbar-color: rebeccapurple white;
   scrollbar-width: thin;

@@ -1,11 +1,13 @@
 .card-style {
     margin: 15px;
-    width: 16rem;
+    width: 18rem;
+    overflow: hidden;
 }
 .card-height{
-    height: 420px;
+    height: 350px;
 }
 .card-style img {
     padding: 10px;
     border-radius: 5px;
+    height: 250px;
 }

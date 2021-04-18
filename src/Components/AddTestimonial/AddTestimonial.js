@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import DashboardNavbar from '../DashboardNavbar/DashboardNavbar';
 
 const AddTestimonial = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -28,6 +29,7 @@ const AddTestimonial = () => {
 
     return (
         <div>
+            <DashboardNavbar isAdmin={false}></DashboardNavbar>
             <h1 className='my-3 ml-2 component-color'>Add a Review:</h1>
             <div className='form-card'>
                 <h2 className='text-center brand-color mb-4'>Give all Review information below</h2>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import DashboardNavbar from '../DashboardNavbar/DashboardNavbar';
 import './AddService.css';
 const axios = require('axios').default;
 
@@ -12,7 +13,7 @@ const AddService = () => {
         const serviceData = {
             name: data.name,
             img: imageURL,
-            price: data.price
+            description: data.description
         };
 
         fetch('http://localhost:5000/addService', {
@@ -46,13 +47,14 @@ const AddService = () => {
     }
     return (
         <div>
+            <DashboardNavbar isAdmin={true}></DashboardNavbar>
             <h1 className='my-3 ml-2 component-color'>Add a service:</h1>
             <div className='form-card'>
                 <h2 className='text-center brand-color mb-4'>Give all service information below</h2>
                 <form className='d-flex justify-content-center flex-wrap form-style' onSubmit={handleSubmit(onSubmit)}>
-                    <input className='m-2' name="name" defaultValue="Service Name" {...register("name")} />
+                    <input className='m-2' defaultValue="Service Name" {...register("name")} />
                     <br />
-                    <input className='m-2' name="price" defaultValue="Service Price" {...register("price")} />
+                    <input className='m-2' defaultValue="Description" {...register("description")} />
                     <br />
                     <div className='choose-image add-image-box m-2'>
                         <h5 className='p-2'>Add a Image file below: </h5>
