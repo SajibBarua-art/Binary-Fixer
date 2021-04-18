@@ -6,6 +6,7 @@ import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
 import './Login.css';
 import googleIcon from '../../images/googleIcon.png';
+import Navbar from '../Shared/Navbar/Navbar';
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -31,12 +32,15 @@ const Login = () => {
             });
     }
     return (
-        <div className='d-flex justify-content-center my-5'>
-            <div>
-                <h4 className="mb-4 rounded">You have to login first</h4>
-                <button className='login-btn' onClick={handleGoogleSignIn}>
-                    <img className='google-icon' src={googleIcon} alt="" /> Login with Google
+        <div>
+            <Navbar></Navbar>
+            <div className='d-flex justify-content-center my-5'>
+                <div>
+                    <h4 className="mb-4 rounded">You have to login first</h4>
+                    <button className='login-btn' onClick={handleGoogleSignIn}>
+                        <img className='google-icon' src={googleIcon} alt="" /> Login with Google
                 </button>
+                </div>
             </div>
         </div>
     );
