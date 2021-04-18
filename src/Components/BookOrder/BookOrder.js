@@ -12,7 +12,7 @@ const BookOrder = ({isAdmin}) => {
     console.log(userState);
 
     useEffect(() => {
-        fetch('http://localhost:5000/order/' + id)
+        fetch('https://infinite-sands-68203.herokuapp.com/order/' + id)
             .then(res => res.json())
             .then(data => {
                 setSelectedOrder(data);
@@ -22,7 +22,7 @@ const BookOrder = ({isAdmin}) => {
     const handlePayment = paymentId => {
         const orderDetails = { order: selectedOrder, email: userState.email, state: "pending", paymentId, orderTime: new Date() }
         console.log(orderDetails);
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://infinite-sands-68203.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

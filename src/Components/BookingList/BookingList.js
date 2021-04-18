@@ -10,7 +10,7 @@ const BookingList = ({isAdmin}) => {
     const [isDataLoading, setIsDataLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders/' + email)
+        fetch('https://infinite-sands-68203.herokuapp.com/orders/' + email)
             .then(res => res.json())
             .then(data => {
                 setOrdersService(data);

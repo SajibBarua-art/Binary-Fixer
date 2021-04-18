@@ -13,7 +13,7 @@ const AddTestimonial = () => {
             rating: data.rating
         };
 
-        fetch('http://localhost:5000/addTestimonial', {
+        fetch('https://infinite-sands-68203.herokuapp.com/addTestimonial', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

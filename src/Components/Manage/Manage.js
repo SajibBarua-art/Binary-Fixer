@@ -7,7 +7,7 @@ const Manage = () => {
     const [isDataLoading, setIsDataLoading] = useState(true);
     
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://infinite-sands-68203.herokuapp.com/services')
         .then(res => res.json())
         .then(data => {
             setServices(data);

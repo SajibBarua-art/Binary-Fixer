@@ -16,7 +16,7 @@ const AddService = () => {
             description: data.description
         };
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://infinite-sands-68203.herokuapp.com/addService', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
