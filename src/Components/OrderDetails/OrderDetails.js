@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ServiceState from '../ServiceState/ServiceState';
 
 const OrderDetails = ({ service, isAdmin }) => {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible] = useState(true);
     const [status, setStatus] = useState(service.state);
     return (
         <div className="container">

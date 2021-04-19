@@ -24,7 +24,6 @@ const Login = () => {
             .signInWithPopup(provider)
             .then((result) => {
                 const user = result.user;
-                console.log(user);
                 setUserState(user);
                 history.replace(from);
             }).catch((error) => {
