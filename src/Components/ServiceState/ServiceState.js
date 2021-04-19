@@ -11,7 +11,7 @@ const ServiceState = ({ setStatus, id }) => {
             body: JSON.stringify({ status })
         })
             .then(res => res.json())
-            .then(currentStatus => setStatus(currentStatus))
+            .then(data => setStatus(status))
     }
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
