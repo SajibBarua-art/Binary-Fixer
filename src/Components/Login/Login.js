@@ -13,7 +13,7 @@ if (!firebase.apps.length) {
 }
 
 const Login = () => {
-    const [userState, setUserState] = useContext(UserContext);
+    const [setUserState] = useContext(UserContext);
     const provider = new firebase.auth.GoogleAuthProvider();
     const history = useHistory();
     const location = useLocation();
