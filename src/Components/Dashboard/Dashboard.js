@@ -4,9 +4,9 @@ import BookingList from '../BookingList/BookingList';
 import BookOrder from '../BookOrder/BookOrder';
 
 const Dashboard = () => {
-    const [userState] = useContext(UserContext);
-    const email = userState.email;
+    const [userState, setUserState] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(true);
+    const email = userState.email;
     useEffect(() => {
         fetch('https://infinite-sands-68203.herokuapp.com/admin/' + email)
         .then(res => res.json())

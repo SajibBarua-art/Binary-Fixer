@@ -4,10 +4,10 @@ import DashboardNavbar from '../DashboardNavbar/DashboardNavbar';
 import OrderDetails from '../OrderDetails/OrderDetails';
 
 const BookingList = ({isAdmin}) => {
-    const [userState] = useContext(UserContext);
+    const [userState, setUserState] = useContext(UserContext);
     const [ordersService, setOrdersService] = useState([]);
-    const email = userState.email;
     const [isDataLoading, setIsDataLoading] = useState(true);
+    const email = userState.email;
 
     useEffect(() => {
         fetch('https://infinite-sands-68203.herokuapp.com/orders/' + email)

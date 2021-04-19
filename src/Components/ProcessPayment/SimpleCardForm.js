@@ -3,11 +3,10 @@ import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 import { useState } from 'react';
 
 const SimpleCardForm = ({handlePayment}) => {
-  const stripe = useStripe();
-  const elements = useElements();
-
   const [paymentError, setPaymentError] = useState(null);
   const [paymentSuccess, setPaymentSuccess] = useState(null);
+  const stripe = useStripe();
+  const elements = useElements();
 
   const handleSubmit = async (event) => {
     // Block native form submission.

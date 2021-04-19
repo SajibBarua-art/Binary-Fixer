@@ -5,9 +5,9 @@ import './AddService.css';
 const axios = require('axios').default;
 
 const AddService = () => {
-    const { register, handleSubmit } = useForm();
     const [imageURL, setIMageURL] = useState(null);
     const [loadingSpinner, setLoadingSpinner] = useState(false);
+    const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
         const serviceData = {
