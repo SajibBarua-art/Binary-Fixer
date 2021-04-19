@@ -1,4 +1,4 @@
-The website name is "Chain Smoker". This is a website for cigarette selling. Feature of this website:
+The website name is "Binary Fixing". This is a website for cigarette selling. Feature of this website:
 
 1. One can log in with Google
 2. One can add testimonial
