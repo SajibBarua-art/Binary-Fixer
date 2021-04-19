@@ -3,10 +3,14 @@ import TestimonialDetails from '../TestimonialDetails/TestimonialDetails';
 
 const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([]);
+    const [loadingSpinner, setLoadingSpinner] = useState(true);
     useEffect(() => {
         fetch('https://infinite-sands-68203.herokuapp.com/testimonials')
             .then(res => res.json())
-            .then(data => setTestimonials(data))
+            .then(data => {
+                setTestimonials(data);
+                setLoadingSpinner(false);
+            })
     }, [])
     return (
         <div className="text-center mb-4">
@@ -14,6 +18,13 @@ const Testimonials = () => {
             <p className="fs-5">There are many valid reasons why you should choose us to take care of your valuable device</p>
             <div className="d-flex justify-content-center">
                 <div className="d-flex flex-wrap justify-content-evenly scroll-items bg-gray-style">
+                    {
+                        loadingSpinner && <div className="d-flex justify-content-center m-2">
+                            <div className="spinner-border" role="status">
+                                <span className="visually-hidden"></span>
+                            </div>
+                        </div>
+                    }
                     {
                         testimonials.map(testimonial => <TestimonialDetails key={testimonial._id} testimonial={testimonial}></TestimonialDetails>)
                     }
