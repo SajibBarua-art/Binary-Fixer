@@ -5,7 +5,7 @@ import DashboardNavbar from '../DashboardNavbar/DashboardNavbar';
 import ProcessPayment from '../ProcessPayment/ProcessPayment';
 
 const BookOrder = ({isAdmin}) => {
-    const [userState, setUserState] = useContext(UserContext);
+    const [userState] = useContext(UserContext);
     const { id } = useParams();
     const [selectedOrder, setSelectedOrder] = useState({});
 

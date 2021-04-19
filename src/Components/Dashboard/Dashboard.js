@@ -4,7 +4,7 @@ import BookingList from '../BookingList/BookingList';
 import BookOrder from '../BookOrder/BookOrder';
 
 const Dashboard = () => {
-    const [userState, setUserState] = useContext(UserContext);
+    const [userState] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(true);
     const email = userState.email;
     useEffect(() => {

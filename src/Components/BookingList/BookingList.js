@@ -4,7 +4,7 @@ import DashboardNavbar from '../DashboardNavbar/DashboardNavbar';
 import OrderDetails from '../OrderDetails/OrderDetails';
 
 const BookingList = ({isAdmin}) => {
-    const [userState, setUserState] = useContext(UserContext);
+    const [userState] = useContext(UserContext);
     const [ordersService, setOrdersService] = useState([]);
     const [isDataLoading, setIsDataLoading] = useState(true);
     const email = userState.email;
