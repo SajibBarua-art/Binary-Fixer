@@ -1,11 +1,12 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 
-const ServiceState = ({ setStatus, id }) => {
+const ServiceState = ({ state, id }) => {
     const { register, handleSubmit } = useForm();
 
-    const onSubmit = (status) => {
-        fetch(`/updateStatus/${id}`, {
+    const onSubmit = (data) => {
+        const status = data.statusList;
+        fetch(`https://infinite-sands-68203.herokuapp.com/updateStatus/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ status })
@@ -20,10 +21,10 @@ const ServiceState = ({ setStatus, id }) => {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
 
-            <select {...register("statusList")}>
-                <option value="pending">Pending</option>
-                <option value="going">OnGoing</option>
-                <option value="done">Done</option>
+            <select defaultValue={state} {...register("statusList")}>
+                <option value="Pending">Pending</option>
+                <option value="OnGoing">OnGoing</option>
+                <option value="Done">Done</option>
             </select>
 
             <input type="submit" />

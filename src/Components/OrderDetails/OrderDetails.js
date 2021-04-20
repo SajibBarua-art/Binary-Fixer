@@ -15,7 +15,7 @@ const OrderDetails = ({ service, isAdmin }) => {
                         <p>{service.email}</p>
                     </div>
                     <div className="d-flex justify-content-center col-3">
-                        { isAdmin ? <ServiceState id={service._id} setStatus={setStatus}></ServiceState> :<p>{service.state}</p> }
+                        { isAdmin ? <ServiceState id={service._id} state={status}></ServiceState> :<p>{service.state}</p> }
                     </div>
                 </div>
             }
