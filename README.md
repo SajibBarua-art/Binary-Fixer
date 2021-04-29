@@ -12,7 +12,7 @@ Feature of this website:
 9. Responsive website
 
 All necessary website link are given below:
-client-code-link: https://github.com/Porgramming-Hero-web-course/complete-website-client-SajibBarua-art
-client-site-link: https://binary-fixer.web.app/
-server-code-link: https://github.com/Porgramming-Hero-web-course/complete-website-server-SajibBarua-art
-server-site-link: https://infinite-sands-68203.herokuapp.com/
+1. client-code-link: https://github.com/Porgramming-Hero-web-course/complete-website-client-SajibBarua-art
+2. client-site-link: https://binary-fixer.web.app/
+3. server-code-link: https://github.com/Porgramming-Hero-web-course/complete-website-server-SajibBarua-art
+4. server-site-link: https://infinite-sands-68203.herokuapp.com/
