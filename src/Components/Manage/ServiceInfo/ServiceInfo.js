@@ -4,7 +4,7 @@ const ServiceInfo = ({ service }) => {
     const [isVisible, setIsVisible] = useState(true);
     const deleteProduct = (id) => {
         console.log(id);
-        fetch(`https://infinite-sands-68203.herokuapp.com/delete/service/${id}`, {
+        fetch(`https://binary-fixer-server.vercel.app/delete/service/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

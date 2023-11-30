@@ -5,7 +5,7 @@ import DashboardNavbar from '../DashboardNavbar/DashboardNavbar';
 const MakeAdmin = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        fetch('https://infinite-sands-68203.herokuapp.com/makeAdmin', {
+        fetch('https://binary-fixer-server.vercel.app/makeAdmin', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

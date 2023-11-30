@@ -13,7 +13,7 @@ const AddTestimonial = () => {
             rating: data.rating
         };
 
-        fetch('https://infinite-sands-68203.herokuapp.com/addTestimonial', {
+        fetch('https://binary-fixer-server.vercel.app/addTestimonial', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

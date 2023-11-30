@@ -7,11 +7,12 @@ const Manage = () => {
     const [isDataLoading, setIsDataLoading] = useState(true);
     
     useEffect(()=>{
-        fetch('https://infinite-sands-68203.herokuapp.com/services')
+        fetch('https://binary-fixer-server.vercel.app/services')
         .then(res => res.json())
         .then(data => {
             setServices(data);
             setIsDataLoading(false);
+            console.log(data);
         });
     },[])
     return (

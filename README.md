@@ -18,4 +18,4 @@ All necessary website link are given below:
 1. client-code-link: https://github.com/SajibBarua-art/Binary-Fixer
 2. client-site-link: https://binary-fixer.web.app/
 3. server-code-link: https://github.com/SajibBarua-art/Binary-Fixer-Server
-4. server-site-link: https://infinite-sands-68203.herokuapp.com/
+4. server-site-link: https://binary-fixer-server.vercel.app/

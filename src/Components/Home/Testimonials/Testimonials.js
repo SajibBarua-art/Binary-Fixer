@@ -5,11 +5,12 @@ const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([]);
     const [loadingSpinner, setLoadingSpinner] = useState(true);
     useEffect(() => {
-        fetch('https://infinite-sands-68203.herokuapp.com/testimonials')
+        fetch('https://binary-fixer-server.vercel.app/testimonials')
             .then(res => res.json())
             .then(data => {
                 setTestimonials(data);
                 setLoadingSpinner(false);
+                console.log(data);
             })
     }, [])
     return (

@@ -10,7 +10,7 @@ const BookOrder = ({isAdmin}) => {
     const [selectedOrder, setSelectedOrder] = useState({});
 
     useEffect(() => {
-        fetch('https://infinite-sands-68203.herokuapp.com/order/' + id)
+        fetch('https://binary-fixer-server.vercel.app/order/' + id)
             .then(res => res.json())
             .then(data => {
                 setSelectedOrder(data);
@@ -20,7 +20,7 @@ const BookOrder = ({isAdmin}) => {
     const handlePayment = paymentId => {
         const orderDetails = { order: selectedOrder, email: userState.email, state: "pending", paymentId, orderTime: new Date() }
         console.log(orderDetails);
-        fetch('https://infinite-sands-68203.herokuapp.com/addOrder', {
+        fetch('https://binary-fixer-server.vercel.app/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

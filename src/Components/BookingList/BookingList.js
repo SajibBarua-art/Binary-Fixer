@@ -10,7 +10,7 @@ const BookingList = ({isAdmin}) => {
     const email = userState.email;
 
     useEffect(() => {
-        fetch('https://infinite-sands-68203.herokuapp.com/orders/' + email)
+        fetch('https://binary-fixer-server.vercel.app/orders/' + email)
             .then(res => res.json())
             .then(data => {
                 setOrdersService(data);

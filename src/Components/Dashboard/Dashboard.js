@@ -8,7 +8,7 @@ const Dashboard = () => {
     const [isAdmin, setIsAdmin] = useState(true);
     const email = userState.email;
     useEffect(() => {
-        fetch('https://infinite-sands-68203.herokuapp.com/admin/' + email)
+        fetch('https://binary-fixer-server.vercel.app/admin/' + email)
         .then(res => res.json())
         .then(adminData => {
             if(adminData.length === 0) {

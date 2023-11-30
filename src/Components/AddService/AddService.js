@@ -16,7 +16,7 @@ const AddService = () => {
             description: data.description
         };
 
-        fetch('https://infinite-sands-68203.herokuapp.com/addService', {
+        fetch('https://binary-fixer-server.vercel.app/addService', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

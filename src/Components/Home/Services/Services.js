@@ -5,11 +5,12 @@ const Services = () => {
     const [services, setServices] = useState([]);
     const [loadingSpinner, setLoadingSpinner] = useState(true);
     useEffect(() => {
-        fetch('https://infinite-sands-68203.herokuapp.com/services')
+        fetch('https://binary-fixer-server.vercel.app/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data);
                 setLoadingSpinner(false);
+                console.log(data);
             })
     }, [])
 
