@@ -5,7 +5,7 @@ const Services = () => {
     const [services, setServices] = useState([]);
     const [loadingSpinner, setLoadingSpinner] = useState(true);
     useEffect(() => {
-        fetch('https://binary-fixer-server.vercel.app/services')
+        fetch('http://localhost:5005/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data);
@@ -15,7 +15,7 @@ const Services = () => {
     }, [])
 
     return (
-        <div className='mb-4'>
+        <div className='mb-4' id = "services">
             <h2 className='ms-4'>Our <span className="brand-color">Services</span>:</h2>
             <div className="d-flex justify-content-center">
                 <div className="d-flex flex-wrap justify-content-evenly scroll-items bg-gray-style">

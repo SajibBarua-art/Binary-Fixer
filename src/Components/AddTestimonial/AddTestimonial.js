@@ -13,7 +13,7 @@ const AddTestimonial = () => {
             rating: data.rating
         };
 
-        fetch('https://binary-fixer-server.vercel.app/addTestimonial', {
+        fetch('http://localhost:5005/addTestimonial', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

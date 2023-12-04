@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './DashboardNavbar.css';
 
 const DashboardNavbar = ({ isAdmin }) => {
+    console.log(isAdmin);
     return (
         <div className="container text-break test-wrap">
             {
@@ -26,16 +27,16 @@ const DashboardNavbar = ({ isAdmin }) => {
                     </div>
                     :
                     <div className="row admin-navbar">
-                        <div className="col-md-3 col-sm-12 d-flex justify-content-center">
+                        <div className="col-md-3 col-sm-12 d-flex justify-content-center active">
                             <Link to='/home'><button className="btn btn-outline-success">Home</button></Link>
                         </div>
-                        <div className="col-md-3 col-sm-12 d-flex justify-content-center">
+                        <div className="col-md-3 col-sm-12 d-flex justify-content-center active">
                             <Link to='/bookOrder'><button className="btn btn-outline-success">Book</button></Link>
                         </div>
-                        <div className="col-md-3 col-sm-12 d-flex justify-content-center">
+                        <div className="col-md-3 col-sm-12 d-flex justify-content-center active">
                             <Link to='/bookingList'><button className="btn btn-outline-success">Booking List</button></Link>
                         </div>
-                        <div className="col-md-3 col-sm-6 d-flex justify-content-center">
+                        <div className="col-md-3 col-sm-6 d-flex justify-content-center active">
                             <Link to='/addTestimonial'><button className="btn btn-outline-success">Testimonial</button></Link>
                         </div>
                     </div>

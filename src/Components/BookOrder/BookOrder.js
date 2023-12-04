@@ -10,7 +10,7 @@ const BookOrder = ({isAdmin}) => {
     const [selectedOrder, setSelectedOrder] = useState({});
 
     useEffect(() => {
-        fetch('https://binary-fixer-server.vercel.app/order/' + id)
+        fetch('http://localhost:5005/order/' + id)
             .then(res => res.json())
             .then(data => {
                 setSelectedOrder(data);
@@ -20,7 +20,7 @@ const BookOrder = ({isAdmin}) => {
     const handlePayment = paymentId => {
         const orderDetails = { order: selectedOrder, email: userState.email, state: "pending", paymentId, orderTime: new Date() }
         console.log(orderDetails);
-        fetch('https://binary-fixer-server.vercel.app/addOrder', {
+        fetch('http://localhost:5005/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

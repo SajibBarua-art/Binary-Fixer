@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
     return (
-        <div className="text-center m-5">
+        <div className="text-center m-5" id = "contact">
             <h1>Get <span className="brand-color">Your Computer</span> Fixed Now!</h1>
             <h3 className='text-secondary my-1'>+1-800-1234567</h3>
             <p className='fs-5'>for one of our professional computer repair techs to help you with your Desktop, Laptop, Mac or other inquiry</p>

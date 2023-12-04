@@ -6,7 +6,7 @@ const ServiceState = ({ state, id }) => {
 
     const onSubmit = (data) => {
         const status = data.statusList;
-        fetch(`https://binary-fixer-server.vercel.app/updateStatus/${id}`, {
+        fetch(`http://localhost:5005/updateStatus/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ status })

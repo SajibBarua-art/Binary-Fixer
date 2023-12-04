@@ -4,7 +4,7 @@ const ServiceInfo = ({ service }) => {
     const [isVisible, setIsVisible] = useState(true);
     const deleteProduct = (id) => {
         console.log(id);
-        fetch(`https://binary-fixer-server.vercel.app/delete/service/${id}`, {
+        fetch(`http://localhost:5005/delete/service/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

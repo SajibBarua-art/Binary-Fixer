@@ -7,7 +7,7 @@ const Manage = () => {
     const [isDataLoading, setIsDataLoading] = useState(true);
     
     useEffect(()=>{
-        fetch('https://binary-fixer-server.vercel.app/services')
+        fetch('http://localhost:5005/services')
         .then(res => res.json())
         .then(data => {
             setServices(data);

@@ -5,7 +5,7 @@ import DashboardNavbar from '../DashboardNavbar/DashboardNavbar';
 const MakeAdmin = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        fetch('https://binary-fixer-server.vercel.app/makeAdmin', {
+        fetch('http://localhost:5005/makeAdmin', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

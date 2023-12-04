@@ -16,7 +16,7 @@ const AddService = () => {
             description: data.description
         };
 
-        fetch('https://binary-fixer-server.vercel.app/addService', {
+        fetch('http://localhost:5005/addService', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

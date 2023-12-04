@@ -8,3 +8,10 @@
     background-color: gray;
     border-radius: 5px;
 }
+.nav-link.active {
+    background-color: gray !important;
+    border-radius: 3px;
+}
+.navbar-style {
+    height: 42px;
+}

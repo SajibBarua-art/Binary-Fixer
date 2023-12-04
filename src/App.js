@@ -8,6 +8,8 @@ import Home from './Components/Home/Home/Home';
 import AddService from './Components/AddService/AddService';
 import AddTestimonial from './Components/AddTestimonial/AddTestimonial';
 import Login from './Components/Login/Login';
+import Signup from './Components/Login/Signup';
+import Signout from './Components/Login/Signout';
 import { createContext, useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import BookOrder from './Components/BookOrder/BookOrder';
@@ -33,6 +35,12 @@ function App() {
           <Route path='/login'>
             <Login></Login>
           </Route>
+          <Route path='/signup'>
+            <Signup></Signup>
+          </Route>
+          <Route path='/signout'>
+            <Signout></Signout>
+          </Route>
 
           <PrivateRoute path='/order/:id'>
             <Dashboard></Dashboard>
@@ -44,9 +52,9 @@ function App() {
           <PrivateRoute path='/addService'>
             <AddService></AddService>
           </PrivateRoute>
-          <PrivateRoute path='/makeAdmin'>
+          <Route path='/makeAdmin'>
             <MakeAdmin></MakeAdmin>
-          </PrivateRoute>
+          </Route>
           <PrivateRoute path='/manage'>
             <Manage></Manage>
           </PrivateRoute>

@@ -10,11 +10,12 @@ const BookingList = ({isAdmin}) => {
     const email = userState.email;
 
     useEffect(() => {
-        fetch('https://binary-fixer-server.vercel.app/orders/' + email)
+        fetch('http://localhost:5005/orders/' + email)
             .then(res => res.json())
             .then(data => {
                 setOrdersService(data);
                 setIsDataLoading(false);
+                console.log(data);
             })
     }, [email])
     return (

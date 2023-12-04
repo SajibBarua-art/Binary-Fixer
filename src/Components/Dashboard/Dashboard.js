@@ -8,9 +8,10 @@ const Dashboard = () => {
     const [isAdmin, setIsAdmin] = useState(true);
     const email = userState.email;
     useEffect(() => {
-        fetch('https://binary-fixer-server.vercel.app/admin/' + email)
+        fetch('http://localhost:5005/admin/' + email)
         .then(res => res.json())
         .then(adminData => {
+            console.log(isAdmin);
             if(adminData.length === 0) {
                 setIsAdmin(false);
             }

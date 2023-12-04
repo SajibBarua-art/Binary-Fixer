@@ -1,13 +1,13 @@
 import React from 'react';
-import Navbar from '../../Shared/Navbar/Navbar';
+import ScrollNavbar from '../../Shared/Navbar/ScrollNavbar';
 
 const Header = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <ScrollNavbar></ScrollNavbar>
 
             {/* Carousel part */}
-            <div className=''>
+            <div className='' id = "home">
                 <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

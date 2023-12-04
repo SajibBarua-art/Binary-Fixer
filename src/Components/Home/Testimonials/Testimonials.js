@@ -5,7 +5,7 @@ const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([]);
     const [loadingSpinner, setLoadingSpinner] = useState(true);
     useEffect(() => {
-        fetch('https://binary-fixer-server.vercel.app/testimonials')
+        fetch('http://localhost:5005/testimonials')
             .then(res => res.json())
             .then(data => {
                 setTestimonials(data);
@@ -14,7 +14,7 @@ const Testimonials = () => {
             })
     }, [])
     return (
-        <div className="text-center mb-4">
+        <div className="text-center mb-4" id = "testimonials">
             <h1>Our <span className="brand-color">Testimonials</span> :</h1>
             <p className="fs-5">There are many valid reasons why you should choose us to take care of your valuable device</p>
             <div className="d-flex justify-content-center">
