@@ -1,6 +1,7 @@
 import React from 'react';
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 import { useState } from 'react';
+import './SimpleCardForm.css'
 
 const SimpleCardForm = ({handlePayment}) => {
   const [paymentError, setPaymentError] = useState(null);
@@ -40,19 +41,23 @@ const SimpleCardForm = ({handlePayment}) => {
   };
 
   return (
-    <div>
-        <form onSubmit={handleSubmit}>
-            <CardElement />
-            <button className='brand-btn px-4 m-3' type="submit" disabled={!stripe}>
-                Pay
-            </button>
-        </form>
-        {
-            paymentError && <p style={{color: 'red'}}>{paymentError}</p>
-        }
-        { 
-            paymentSuccess && <p style={{color: 'green'}}>Your payment is successful.</p>
-        }
+    <div id="payment-style" className="container d-flex justify-content-center my-5">
+        <section className='signup-form'>
+          <form onSubmit={handleSubmit} className='my-4'>
+              <CardElement />
+              <div className='form-group btn-right'>
+                <button className='brand-btn px-4 mt-5' type="submit" disabled={!stripe}>
+                    Pay
+                </button>
+              </div>
+          </form>
+          {
+              paymentError && <p style={{color: 'red'}}>{paymentError}</p>
+          }
+          { 
+              paymentSuccess && <p style={{color: 'green'}}>Your payment is successful.</p>
+          }
+        </section>
     </div>
   );
 };

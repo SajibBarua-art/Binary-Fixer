@@ -86,3 +86,8 @@
 .link-text a:hover {
     text-decoration: underline;
 }
+
+.btn-right {
+    text-align : right;
+    margin: 0 15px 0 0;
+}

@@ -15,7 +15,7 @@ const BookOrder = ({isAdmin}) => {
             .then(data => {
                 setSelectedOrder(data);
             });
-    }, [id])
+    }, [id]);
 
     const handlePayment = paymentId => {
         const orderDetails = { order: selectedOrder, email: userState.email, state: "pending", paymentId, orderTime: new Date() }

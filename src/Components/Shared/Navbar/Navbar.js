@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../../Login/firebase';
@@ -14,12 +14,14 @@ const Navbar = () => {
 
     }
 
-    const history = useHistory();
+    const logoutStyle = {
+        fontWeight: 'bold'
+    }
+
     const handleLogout = () => {
         signOut(auth)
           .then(() => {
             // Sign-out successful.
-            history.push('/');
             console.log('Signed out successfully');
           })
           .catch((error) => {
@@ -28,14 +30,18 @@ const Navbar = () => {
     };
 
 
-    const [user, setUser] = useState(null);
+    const [userVerified, setUserVerified] = useState(null);
     const [userState, setUserState] = useContext(UserContext);
     
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
-            setUser(user);
-            setUserState(user);
-            console.log(userState);
+            if(user && user.emailVerified) {
+                setUserVerified(user);
+                setUserState(user);
+            } else {
+                setUserVerified(null);
+                setUserState(null);
+            }
         });
 
         // Cleanup the subscription when the component unmounts
@@ -43,7 +49,7 @@ const Navbar = () => {
     }, []); // Empty dependency array to run the effect only once
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark navbar-style bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark navbar-style bg-dark fixed-top nabvar-style">
             <div className="container-fluid d-flex justify-content-between align-items-start">
                 <div>
                     <Link style={brandStyle} to='/home'>Binary Fixer</Link>
@@ -70,11 +76,11 @@ const Navbar = () => {
                                 <Link className="nav-link" to="/services"> Testimonials </Link>
                             </li>
 
-                            {user ? (
+                            {userVerified ? (
                             <li className="nav-item">
-                                <Link onClick={handleLogout} to="/" className="nav-link btn btn-secondary">
+                                <button onClick={handleLogout} className="nav-link btn btn-secondary" style={logoutStyle} >
                                     Log Out
-                                </Link>
+                                </button>
                             </li>
                             ) : (
                             <>

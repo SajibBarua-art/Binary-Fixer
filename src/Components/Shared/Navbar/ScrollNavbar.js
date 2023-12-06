@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { useEffect, useState } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
@@ -15,13 +15,15 @@ const ScrollNavbar = () => {
         textDecoration: 'none',
 
     }
+    
+    const logoutStyle = {
+        fontWeight: 'bold'
+    }
 
-    const history = useHistory();
     const handleLogout = () => {
         signOut(auth)
           .then(() => {
             // Sign-out successful.
-            history.push('/');
             console.log('Signed out successfully');
           })
           .catch((error) => {
@@ -46,14 +48,18 @@ const ScrollNavbar = () => {
         };
     }, []);
 
-    const [user, setUser] = useState(null);
+    const [userVerified, setUserVerified] = useState(null);
     const [userState, setUserState] = useContext(UserContext);
     
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
-            setUser(user);
-            setUserState(user);
-            console.log(userState);
+            if(user && user.emailVerified) {
+                setUserVerified(user);
+                setUserState(user);
+            } else {
+                setUserVerified(null);
+                setUserState(null);
+            }
         });
 
         // Cleanup the subscription when the component unmounts
@@ -138,11 +144,11 @@ const ScrollNavbar = () => {
                                 </ScrollLink>
                             </li>
 
-                            {user ? (
+                            {userVerified ? (
                             <li className="nav-item">
-                                <Link onClick={handleLogout} to="/" className="nav-link btn btn-secondary">
+                                <button onClick={handleLogout} className="nav-link btn btn-secondary" style={logoutStyle} >
                                     Log Out
-                                </Link>
+                                </button>
                             </li>
                             ) : (
                             <>

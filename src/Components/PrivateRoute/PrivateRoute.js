@@ -17,7 +17,7 @@ const PrivateRoute = ({ children, ...rest }) => {
             // Render a function that takes route props
             render={({ location }) =>
                 // Check if the user is authenticated (in this case, if there is an email in the userState)
-                userState.email ? (
+                userState && userState.email ? (
                     // If authenticated, render the children components
                     children
                 ) : (

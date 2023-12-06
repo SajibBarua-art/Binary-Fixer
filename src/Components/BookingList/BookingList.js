@@ -44,6 +44,8 @@ const BookingList = ({isAdmin}) => {
             }
             <div className="mb-5">
                 {
+                    (ordersService.length === 0 && !isDataLoading) ?
+                    <p className='text-center'>There is no order you make yet!</p> :
                     ordersService.map(service => <OrderDetails isAdmin={isAdmin} service={service} key={service._id}></OrderDetails>)
                 }
             </div>

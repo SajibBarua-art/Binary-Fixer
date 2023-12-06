@@ -7,7 +7,7 @@ import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
     return (
-        <div className="bg-dark mt-3 pt-3 pb-1 text-white text-center mt-auto">
+        <div id="footer-bottom" className="bg-dark pt-3 pb-1 text-white text-center">
             <div className='d-flex justify-content-center'>
                 <Link to='/IphoneRepair' className="text-white mx-3 text-decoration-none fs-5">Iphone Repair</Link>
                 <Link to='/IpadRepair' className="text-white mx-3 text-decoration-none fs-5">Ipad Repair</Link>

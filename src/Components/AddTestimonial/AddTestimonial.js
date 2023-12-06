@@ -20,40 +20,76 @@ const AddTestimonial = () => {
             },
             body: JSON.stringify(testimonialData)
         })
-            .then(res => {
-                if (res) {
-                    alert('Your submitted testimonial is accepted successfully.')
-                }
-            })
+        .then(res => {
+            if (res) {
+                alert('Your submitted review is accepted successfully.')
+            }
+        })
     };
 
     return (
-        <div>
+        <div className='mb-5'>
             <DashboardNavbar isAdmin={false}></DashboardNavbar>
             <h1 className='my-3 ml-2 component-color'>Add a Review:</h1>
-            <div className='form-card'>
-                <h2 className='text-center brand-color mb-4'>Give all Review information below</h2>
-                <form className='d-flex justify-content-center flex-wrap form-style' onSubmit={handleSubmit(onSubmit)}>
-                    <div>
-                        <input className='m-2' type="text" defaultValue="Your Full Name" {...register("client", { required: true })} />
-                        {errors.client && <p className="text-danger">Your Name is Required!</p>}
-                    </div>
-                    <br />
-                    <div>
-                        <input className='m-2' type="text" defaultValue="Service Name" {...register("name", { required: true })} />
-                        {errors.name && <p className="text-danger">Service name is Required!</p>}
-                    </div>
-                    <br />
-                    <div className="mt-2 mx-4">
-                        <h4>Rating: <input style={{ width: '60px' }} type="number" defaultValue="Rating" {...register("rating", { min: 0, max: 5 })} /></h4>
-                        {errors.rating && <p className="text-danger">Rating must be in range of 0 to 5!</p>}
-                        
-                    </div>
-                    <br />
-                    <input className='m-2' type="text" defaultValue="Description" {...register("description")} />
-                    <input style={{ height: '50px' }} className='btn btn-success m-3' type="submit" />
-                </form>
-            </div>
+
+            <main className="container d-flex justify-content-center mt-5">
+                <div className='signup-form'>
+                    <h2 className='text-center brand-color mb-4'>Your Review information</h2>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div className='form-group my-3'>
+                            <label className='label-form' htmlFor="fullName"> Your Full Name </label>
+                            <input 
+                                className='m-2 input-form' 
+                                type="text" 
+                                id="fullName"
+                                placeholder="Your full name"
+                                required
+                                {...register("client", { required: true })} 
+                            />
+                            {errors.client && <p className="text-danger">Your Name is Required!</p>}
+                        </div>
+                        <div className='form-group my-3'>
+                            <label className='label-form' htmlFor="serviceName"> Service Name </label>
+                            <input 
+                                className='m-2 input-form' 
+                                type="text"
+                                id="serviceName" 
+                                placeholder="Service name"
+                                required
+                                {...register("name", { required: true })} 
+                            />
+                            {errors.name && <p className="text-danger">Service name is Required!</p>}
+                        </div>
+                        <div className='form-group my-3'>
+                            <label className='label-form' htmlFor="rating"> Rating </label>
+                            <input 
+                                className='m-2 input-form'
+                                type="number" 
+                                id="rating"
+                                required
+                                placeholder="Enter rating from (1-5)"
+                                {...register("rating", { min: 0, max: 5 })}
+                                min="1" // Set the minimum value for the rating
+                                max="5" // Set the maximum value for the rating
+                            />
+                            {errors.rating && <p className="text-danger">Rating must be in the range of 0 to 5!</p>}
+                            
+                        </div>
+                        <div className='form-group my-3'>
+                            <label className='label-form' htmlFor="description"> Description </label>
+                            <textarea 
+                                className='m-2 input-form'
+                                placeholder="Description" 
+                                {...register("description")}
+                                rows="5"
+                            />
+                        </div>
+                        <div className='btn-right'>
+                            <input style={{ height: '40px' }} className='btn btn-success m-3' type="submit" />
+                        </div>
+                    </form>
+                </div>
+            </main>
         </div>
     );
 };

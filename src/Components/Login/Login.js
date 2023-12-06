@@ -3,7 +3,6 @@ import './Login.css';
 import Navbar from '../Shared/Navbar/Navbar';
 import EmailPasswordLogin from './EmailPasswordLogin';
 import GoogleLogin from './GoogleLogin';
-import Footer from '../Shared/Footer/Footer';
 
 const Login = () => {
     return (
@@ -11,7 +10,6 @@ const Login = () => {
             <Navbar />
             <EmailPasswordLogin />
             <GoogleLogin />
-            <Footer></Footer>
         </div>
     );
 };

@@ -39,3 +39,9 @@
   padding: 20px;
   border-radius: 6px;
 }
+
+#container-footer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
